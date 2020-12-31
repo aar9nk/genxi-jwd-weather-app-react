@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# The Weather App continued...
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+Create an app that uses [openweather.org](https://openweathermap.org/guide) to grab the current weather in a location of your choice. This is the extension from the previous version, using React. There will be less guidance in this example, so make sure to reach out if you are stuck! 
 
-In the project directory, you can run:
+> #### Tools
+> - [Previous version](https://github.com/aar9nk/weather-app)
+> - [Bootstrap](https://getbootstrap.com/)
+> - [Async Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+> - [reactjs](https://reactjs.org/)      
+    
+    
+### Step 1: The setup
 
-### `npm start`
+1. Create the file and folder structure you need for the project, removing any unwanted files. 
+2. Replace the necessary parts of the `public` folder, linking bootstrap in the html file.
+3. Find your openweather app key and store it in a file in the root folder of the project called `.env` : 
+`REACT_APP_OPEN_WEATHER_API_KEY=put your key here`
+4. Refactor your html into jsx. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Step 2: The card template
 
-### `npm test`
+1. Create a component for a template card. 
+2. For now *hardcoded* data is fine, but shortly it will be using props. 
+3. import proptypes using `import PropTypes from "prop-types";` This will allow the props to be type checked.
+4. Take the previous cardHtml and paste it in the render section, changing any necessary jsx syntax
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Step 3: The weather app
 
-### `npm run build`
+1. Import the Card and useState.
+2. Create a useState hook for the input's value, and one for the weather data.
+3. Target the input's value and and use the hook to set the state on change.
+4. Create a `handleSubmit` function that is called on submit of the form. This function will call the API and use the result to set the `weather` state with the `setWeather` hook. Try a `console.log` to make sure it works.
+5. Render the `Card` component if there is data in the `weather` state. 
+6. Pass the weather state as a prop into the `Card` component. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Step 4: Testing and beyond
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+React has a built in testing library that is quite similair to `chai`. Now is a great time to get started on learning how to test your react apps! As all the work you do in your career will be utalising testing. Start small and then test each function and each component and their props. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+There is an opportunity to learn even more technologies, such as [typescript](https://create-react-app.dev/docs/adding-typescript/). Or more advanced react techniques such as [react redux](https://react-redux.js.org/).
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -38,7 +38,7 @@ Create an app that uses [openweather.org](https://openweathermap.org/guide) to g
 
 ### Step 4: Testing and beyond
 
-React has a built in testing library that is quite similair to `chai`. Now is a great time to get started on learning how to test your react apps! As all the work you do in your career will be utalising testing. Start small and then test each function and each component and their props. 
+React has a built in testing library that is quite similar to `chai`. Now is a great time to get started on learning how to test your react apps! As all the work you do in your career will be utilizing testing. Start small and then test each function and each component and their props. 
 
 There is an opportunity to learn even more technologies, such as [typescript](https://create-react-app.dev/docs/adding-typescript/). Or more advanced react techniques such as [react redux](https://react-redux.js.org/).
 

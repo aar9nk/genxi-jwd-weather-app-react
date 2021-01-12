@@ -1,5 +1,7 @@
 # The Weather App continued...
 
+![A demo of the site](weather-app.JPG)
+
 ## Description
 
 Create an app that uses [openweather.org](https://openweathermap.org/guide) to grab the current weather in a location of your choice. This is the extension from the previous version, using React. There will be less guidance in this example, so make sure to reach out if you are stuck! 

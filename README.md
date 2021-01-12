@@ -30,7 +30,7 @@ Create an app that uses [openweather.org](https://openweathermap.org/guide) to g
 ### Step 3: The weather app
 
 1. Import the Card and useState.
-2. Create a useState hook for the input's value, and one for the weather data.
+2. Create a setState hook for the input's value, and one for the weather data.
 3. Target the input's value and and use the hook to set the state on change.
 4. Create a `handleSubmit` function that is called on submit of the form. This function will call the API and use the result to set the `weather` state with the `setWeather` hook. Try a `console.log` to make sure it works.
 5. Render the `Card` component if there is data in the `weather` state. 
